@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="styl2.css">
+    <link rel="icon" type="image/x-icon" href="Nowy projekt.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Kontakt</h1>
+        <div class="form">
+            <div class="label">
+                <label for="imie">Imie:</label>
+                <label for="nazwisko">Nazwisko:</label>
+                <label for="email">E-mail:</label>
+                <label for="zgloszenie">Zgłoszenie:</label>
+            </div>
+            <div class="inputen">
+                <input type="text" name="imie" id="imie" required>
+                <input type="text" name="nazwisko" id="nazwisko" required>
+                <input type="email" name="email" id="email" required>
+                <select name="zgloszenie" id="zgloszenie">
+                    <option value="naprawa komputerów">Naprawa komputerów</option>
+                    <option value="odzyskiwanie danych">Odzyskiwanie danych</option>
+                    <option value="wirusy">Wirusy</option>
+                    <option value="konfiguracja LAN">Konfiguracja LAN</option>
+                </select>
+            </div>
+        </div>
+        <input type="checkbox" name="checkbox"><label for="checkbox">Wysłać kopię wiadomości?</label><br>
+        <button onclick="czysc()">Czyść</button>
+        <button onclick="send()">Wyślij</button>
+        <hr>
+        <div id="nazwa"></div>
+        <div id="email2"></div>
+        <div id="usluga"></div>
+    </div>
+</body>
+<script>
+    function czysc(){
+        console.log("sikla");
+        document.getElementById("nazwa").textContent = " ";
+        document.getElementById("email2").textContent = " ";
+        document.getElementById("usluga").textContent = " ";
+
+    }
+    function send(){
+        var imie = document.getElementById("imie").value;
+        var nazwisko = document.getElementById("nazwisko").value;
+        var email = document.getElementById("email").value;
+        option = document.getElementById("zgloszenie").value;
+        document.getElementById("nazwa").textContent = imie + ", " + nazwisko;
+        document.getElementById("email2").textContent = email.toLowerCase;
+        document.getElementById("usluga").textContent = "Usługa: " + option;
+    }
+</script>
+</html>

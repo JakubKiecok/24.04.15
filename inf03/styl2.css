@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  #E0F7FA;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.form{
+    display: flex;
+}
+.label{
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+}
+.inputen{
+    display: flex;
+    flex-direction: column;
+}
+.label label{
+    margin: 3px;
+}
+.inputen input{
+    margin: 2px;
+}
